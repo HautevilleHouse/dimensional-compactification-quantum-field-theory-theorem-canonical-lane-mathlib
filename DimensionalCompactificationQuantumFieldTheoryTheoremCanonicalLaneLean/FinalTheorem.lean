@@ -1,0 +1,16 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DimensionalCompactificationQuantumFieldTheoryTheoremCanonicalLaneLean.CompactificationSpectrumLayer
+import DimensionalCompactificationQuantumFieldTheoryTheoremCanonicalLaneLean.EffectiveFieldTheoryLayer
+
+namespace HautevilleHouse
+namespace DimensionalCompactificationQuantumFieldTheoryTheoremCanonicalLaneLean
+
+def ConstrainedDimensionalCompactificationClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_dimensional_compactification_closure (A : AdmissibleClass) :
+    ConstrainedDimensionalCompactificationClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DimensionalCompactificationQuantumFieldTheoryTheoremCanonicalLaneLean
+end HautevilleHouse
